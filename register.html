@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>汇购科技</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no,email=no">
+
+	<link href="frame/lib/webui/1.0.0/phone/css/webui.css" rel="stylesheet"/>
+	<link href="css/cssinit.css" rel="stylesheet"/>
+	<link href="css/homepage.css" rel="stylesheet"/>
+</head>
+<body>
+	<div id="STEP_0" class="Stepcont" desc="news"></div>
+	<div id="STEP_1"  class="Stepcont" desc="compinfo"></div>
+	<div id="STEP_2" class="Stepcont" desc="joinUs"></div>
+	<div id="STEP_3" class="Stepcont" desc="prodCategory"></div>
+	<div id="STEP_4"  class="Stepcont" desc="sucCase"></div>
+	<div id="STEP_5" class="Stepcont" desc="detailDesc"></div>
+</body>
+
+	<script src="frame/lib/jquery/2.1.4/jquery.js" charset="utf-8"></script>
+	<script src="frame/lib/webui/1.0.0/phone/js/webui.js"></script>
+	<script src="frame/lib/sea/3.0.0/sea.js"></script>
+	<script src="frame/lib/Rose/1.0.0/Rose.src.js"></script>
+	<script src="frame/lib/handlebars/3.0.3/handlebars.js"></script>
+	<script src="frame//lib/iSlider/iSlider.js"></script>
+	<script src="frame/lib/fastclick/fastclick.js"></script>
+	<script src="frame/lib/mui/mui.min.js"></script>
+	 <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+	<script src="js/config.js" charset="utf-8"></script>
+	<script>
+	
+	
+	/**
+	 * [description]
+	 * @AuthorHTL                              xianfei
+	 * @DateTime    2016-06-27T11:25:44+0800
+	 * @description   解决移动端click点击事件 延迟的问题
+	 * @param       {[type]}                 ) {              		 FastClick.attach(document.body);	} [description]
+	 * @return      {[type]}                   [description]
+	 */
+	$(function() {
+   		 FastClick.attach(document.body);
+	});	
+	/**
+	 * [description]
+	 * @AuthorHTL                                  xianfei
+	 * @DateTime    2016-06-27T11:26:09+0800
+	 * @description [seaJS 模板加载]	 
+	 * @param       {[type]}                 home) {               	home.init();	} [description]
+	 * @return      {[type]}                       [description]
+	 */
+ 	seajs.use("js/home", function(home) {
+    	home.init();
+	});
+</script>
+</html>
