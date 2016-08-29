@@ -11,31 +11,30 @@ html, body {
 .Stepcont {
 	display: none;
 }
-::-webkit-input-placeholder {
+.s0input1::-webkit-input-placeholder {
 
 	/* WebKit browsers */
 	color: rgb(120, 231, 187);
 }
-:-moz-placeholder {
+.s0input1:-moz-placeholder {
 
 	/* Mozilla Firefox 4 to 18 */
 	color: rgb(120, 231, 187);
 }
-::-moz-placeholder {
-
-	/* Mozilla Firefox 19+ */
-	color: rgb(120, 231, 187);
-}
-:-ms-input-placeholder {
+.s0input1:-ms-input-placeholder {
 
 	/* Internet Explorer 10+ */
 	color: rgb(120, 231, 187);
 }
 
+input{
+	outline: medium;
+}
 /**main end*/
 
 /**STEP_0 start*/
 #STEP_0 {
+	height: 100%;
 	background-image: url("../img/register/bg.png");
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -46,7 +45,6 @@ html, body {
 	border: none;	/*background-image: url("../img/register/bg.png");*/
 	color: #fff;
 	background: rgba(73, 213, 157, .1);
-	outline: medium;
 	margin-top: 7px;
 	margin-left: 20px;
 }
@@ -81,23 +79,79 @@ html, body {
 	font-family: "PingFang";
 	color: rgb(255, 255, 255);
 	margin-top: 10px;
-	margin-bottom: 15px;	
+	margin-bottom: 15px;
 }
 .s0v2 {
 	display: inline-block;
 	width: 80%;
 }
-.s0v2p1{
-  color: rgb(1, 117, 74);
-  float: left;
+.s0v2p1 {
+	color: rgb(1, 117, 74);
+	float: left;
 }
-.s0v2p2{
+.s0v2p2 {
 	color: rgb(255, 255, 255);
 	float: right;
 }
+#title {
+	font-size: 17px;
+	color: rgb(238, 255, 226);
+	background-color: #44D29E;
+	text-align: center;
+	height: 50px;
+	margin-bottom: 20px;
+}
+#title img {
+	float: left;
+	width: 12px;
+	margin-top: 12px;
+	margin-left: 13px;
+}
+#title span {
+	display: inline-block;
+	margin-right: 13px;
+	margin-top: 14px;
+}
+
 /**STEP_0 end*/
 
 /**STEP_1 start*/
+.s1v1 {
+	border: 1px solid #C8C8C8;
+	width: 80%;
+	margin: 0 auto;
+	padding: 8px;
+	color: rgb(69, 69, 69);
+	font-size: 14px;
+}
+.s1v2 {
+	margin-top: 30px;
+	width: 80%;
+}
+.s1v3 {
+	border: 1px solid #C8C8C8;
+}
+.s1img1 {
+	width: 20px;
+}
+.s1input1::-webkit-input-placeholder {
+
+	/* WebKit browsers */
+	color: rgb(200, 200, 200);
+}
+.s1input1:-moz-placeholder {
+
+	/* Mozilla Firefox 4 to 18 */
+	color: rgb(200, 200, 200);
+}
+.s1input1:-ms-input-placeholder {
+
+	/* Internet Explorer 10+ */
+	color: rgb(200, 200, 200);
+}
+.s1v3 {
+	display: inline-block;
+}
 
 /**STEP_1 end*/
 
