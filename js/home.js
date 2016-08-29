@@ -52,7 +52,7 @@ define(function(require, exports, module) {
 					});
 					//b.进入注册账号页面
 					$("#registerBtn").unbind("click").bind("click", function() {
-						 $("#STEP_0").hide();
+						$("#STEP_0").hide();
 						load.start();
 						home._login_register_page();
 					});
@@ -73,11 +73,66 @@ define(function(require, exports, module) {
 					$("#STEP_1").html(template());
 					load.done();
 					$("#STEP_1").show();
+					home._business_for_step1();
 				};
 			});
-			
-		},
 
+		},
+		//step1 页面的逻辑
+		_business_for_step1: function() {
+			//xxxxx codeLen   后端可以根据自己需要配置  code的长度
+			//校验码的长度  当用户输入长度达到6 的时候可点击下一步
+			//后期需要优化 ？？ 用户号码的校验和提醒  还有code  是否正确提醒
+			var codeLen = 6;
+			$("#reg_phone").blur(function() {
+				home._judge_can_goto_step2(codeLen);
+			});
+			$("#reg_code").unbind("input propertychange").bind("input propertychange", function() {
+				home._judge_can_goto_step2(codeLen);
+			});
+		},
+		//step1 中绑定事件 判断是否可以进入到下一步 手机验证
+		_judge_can_goto_step2: function(codeLen) {
+			var condition1 = $("#reg_code").val().length == 6;
+			var condition2 = checkPhone($("#reg_phone").val().trim());
+			if (condition1 && condition2) {
+				$("#next1").addClass('active').unbind("click").bind("click", function() {
+					//xxxxx 后端需要带服务  判断输入的手机号码  或者 code  是否正确
+					var can_goto_step2 = submit_step1_data();
+
+					function submit_step1_data() {
+						//xxxx
+						/**
+						 * a,提示手机号码错误
+						 * b，提示code输入错误
+						 */
+						$('body').AITips({
+							'type': 'toast',
+							'message': "请输入正确的验证码[演示效果文案自己改下]",
+							'timeout': 2000,
+						});
+						return true;
+					}
+					if (can_goto_step2) 
+						home._login_step2();
+				});
+			}else{
+				$("#next1").removeClass('active').unbind("click");
+			}
+		},
+		// step2 页面加载
+		_login_step2:function(){
+				$("#STEP_1").hide();
+				load.start();
+				Rose.ajax.getHtml("tpl/step2.tpl", function(html, status) {
+				if (status) {
+					var template = Handlebars.compile(html);
+					$("#STEP_3").html(template());
+					load.done();
+					$("#STEP_3").show();
+				};
+			});
+		},
 	};
 	module.exports = home;
 });
@@ -95,7 +150,7 @@ define(function(require, exports, module) {
  * ♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥
  * @return          {[type]} [handerbars 模板加载]
  */
-var  initHandlebarsHelpers = function(){
+var initHandlebarsHelpers = function() {
 
 	/**
 	 * 页面公共模板加载
@@ -108,3 +163,15 @@ var  initHandlebarsHelpers = function(){
 	});
 }
 
+
+/**common  js  method*/
+/*判断输入是否为合法的手机号码*/
+function checkPhone(inputString) {
+	var partten = /^1[3,5,8]\d{9}$/;
+	var fl = false;
+	if (partten.test(inputString)) {
+		return true;
+	} else {
+		return false;
+	}
+}

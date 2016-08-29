@@ -1,4 +1,4 @@
-<div id="title">
+<div class = "title">
 	{{getHomeTitle this}}
 </div>
 
@@ -13,3 +13,4 @@
 	</div>
 	<img src="img/register/code.png" class="s1img2">	
 </div>
+<p id="next1" class="next1">下一步</p>

@@ -4,6 +4,7 @@
 * {
 	font-size: 14px;
 	font-family: "PingFang";
+	box-sizing: border-box;
 }
 html, body {
 	height: 100%;
@@ -26,10 +27,10 @@ html, body {
 	/* Internet Explorer 10+ */
 	color: rgb(120, 231, 187);
 }
-
-input{
+input {
 	outline: medium;
 }
+
 /**main end*/
 
 /**STEP_0 start*/
@@ -56,7 +57,7 @@ input{
 .s0v0 {
 	border-bottom: 1px #fff solid;
 	margin-bottom: 20px;
-	width: 80%;
+	width: 90%;
 	display: inline-block;
 	padding-bottom: 13px;
 	text-align: left;
@@ -67,7 +68,7 @@ input{
 }
 .s0v1 {
 	display: inline-block;
-	width: 80%;
+	width: 90%;
 	height: 30px;
 	border: 1px solid #fff;
 	background-color: #75E1AF;
@@ -83,7 +84,7 @@ input{
 }
 .s0v2 {
 	display: inline-block;
-	width: 80%;
+	width: 90%;
 }
 .s0v2p1 {
 	color: rgb(1, 117, 74);
@@ -93,7 +94,7 @@ input{
 	color: rgb(255, 255, 255);
 	float: right;
 }
-#title {
+.title {
 	font-size: 17px;
 	color: rgb(238, 255, 226);
 	background-color: #44D29E;
@@ -101,13 +102,13 @@ input{
 	height: 50px;
 	margin-bottom: 20px;
 }
-#title img {
+.title img {
 	float: left;
 	width: 12px;
 	margin-top: 12px;
 	margin-left: 13px;
 }
-#title span {
+.title span {
 	display: inline-block;
 	margin-right: 13px;
 	margin-top: 14px;
@@ -118,18 +119,24 @@ input{
 /**STEP_1 start*/
 .s1v1 {
 	border: 1px solid #C8C8C8;
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 	padding: 8px;
 	color: rgb(69, 69, 69);
 	font-size: 14px;
+	height: 46px;
 }
 .s1v2 {
+	width: 90%;
+	margin: 0 auto;
 	margin-top: 30px;
-	width: 80%;
+	height: 46px;
+	margin-bottom: 30px;
 }
 .s1v3 {
 	border: 1px solid #C8C8C8;
+	padding: 8px;
+	height: 46px;
 }
 .s1img1 {
 	width: 20px;
@@ -151,12 +158,72 @@ input{
 }
 .s1v3 {
 	display: inline-block;
+	width: 60%;
+}
+.s1img2 {
+	height: 46px;
+	width: 37%;
+}
+#reg_code {
+	width: 90px;
+}
+.s1input1 {
+	margin-top: 8px;
+}
+.next1 {
+	margin: 0 auto;
+	font-size: 18px;
+	font-family: "PingFang";
+	background-color: #E8E8E8;
+	color: rgb(255, 255, 255);
+	line-height: 1.2;
+	text-align: center;
+	border-radius: 5px;
+	width: 90%;
+	padding: 8px;
+}
+.active {
+	background-color: #44D29E;
 }
 
 /**STEP_1 end*/
 
 /**STEP_2 start*/
-
+.s2v1 {
+	font-size: 14px;
+	color: rgb(69, 69, 69);
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.s2v2 {
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #C8C8C8;
+	padding: 8px;
+	margin-bottom: 30px;
+}
+.s2img1 {
+	width: 20px;
+}
+.s2input1 {
+}
+#countdownTime {
+	width: 95px;
+    background: #E8E8E8;
+    display: inline-block;
+    height: 47px;
+    float: right;
+    text-align: center;
+    line-height: 44px;
+    position: relative;
+    top: -9px;
+    right: -10px;
+      color: rgb(255, 255, 255);
+}
+.phonecode{
+	margin-top: 5px;
+}
 /**STEP_2 end*/
 
 /**STEP_3 start*/
