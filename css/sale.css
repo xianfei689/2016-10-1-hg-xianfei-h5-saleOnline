@@ -208,21 +208,27 @@ input {
 }
 .s2input1 {
 }
-#countdownTime {
+.countdownTime {
 	width: 95px;
-    background: #E8E8E8;
-    display: inline-block;
-    height: 47px;
-    float: right;
-    text-align: center;
-    line-height: 44px;
-    position: relative;
-    top: -9px;
-    right: -10px;
-      color: rgb(255, 255, 255);
+	background: #E8E8E8;
+	display: inline-block;
+	height: 47px;
+	float: right;
+	text-align: center;
+	line-height: 44px;
+	position: relative;
+	top: -9px;
+	right: -10px;
+	color: #9d9d9e;
 }
-.phonecode{
+.phonecode {
 	margin-top: 5px;
+	color: rgb(69, 69, 69);
+}
+.resetTime{
+	color: #fff;
+	font-size: 14px;
+	background-color: #98F3D2;
 }
 /**STEP_2 end*/
 

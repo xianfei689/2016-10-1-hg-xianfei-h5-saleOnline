@@ -7,7 +7,7 @@
 
 <div class="s2v2">
 	<img src="img/register/phone.png" class="s2img1">
-	<input type="tel" class="phonecode" class="s2input1">
-	<span id="countdownTime">120s</span>
+	<input type="tel" class="phonecode" id="phonecode">
+	<span id="countdownTime" class="countdownTime">120s</span>
 </div>
 <p class="next1" id="next2">下一步</p>

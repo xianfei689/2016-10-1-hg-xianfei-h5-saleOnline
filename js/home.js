@@ -101,7 +101,7 @@ define(function(require, exports, module) {
 					var can_goto_step2 = submit_step1_data();
 
 					function submit_step1_data() {
-						//xxxx
+						//xxxx  需要后台处理号码 发送短信码验证
 						/**
 						 * a,提示手机号码错误
 						 * b，提示code输入错误
@@ -127,10 +127,33 @@ define(function(require, exports, module) {
 				Rose.ajax.getHtml("tpl/step2.tpl", function(html, status) {
 				if (status) {
 					var template = Handlebars.compile(html);
-					$("#STEP_3").html(template());
+					$("#STEP_2").html(template());
 					load.done();
-					$("#STEP_3").show();
+					$("#STEP_2").show();
+					home._business_for_step2();
 				};
+			});
+		},
+		// step2  页面逻辑动画加载
+		_business_for_step2:function(){
+			  //xxx 
+			  //
+			  //倒计时方法  时间要改 
+			  var timeout = 5;
+			  countDowmTimeLoad(timeout);
+			  //手机验证码的长度
+			  var phoneCodeLen = 6;
+			  home._judge_can_goto_step2(phoneCodeLen);	
+		},
+		// 判断是否可以进入到下一步 输入密码
+		_judge_can_goto_step2:function(len){
+			$("#phonecode").unbind("input propertychange").bind("input propertychange", function() {
+				   if ($(this).val().length==len) {
+				   		$("#next2").addClass('active').unbind("click").bind("click",function(){
+				   				//xxxx  后端数据对比  判断是否能进入下一步  报错提醒可以用组件
+				   				
+				   		});
+				   }				
 			});
 		},
 	};
@@ -174,4 +197,29 @@ function checkPhone(inputString) {
 	} else {
 		return false;
 	}
+}
+/**倒计时方法*/
+function countDowmTimeLoad(time){
+	
+	var time = Number(time);
+
+	var timer = window.setInterval(function(){
+				if (time>0) {
+					time--;
+					var str = time+"s";
+		 			$("#countdownTime").text(str);
+				}else{
+					clearInterval(timer);
+					$("#countdownTime").text("重新发送").addClass('resetTime').unbind("click").bind("click",function(){
+						   //xxxxx  重新发送phonecode 
+						   $(this).unbind("click").removeClass('resetTime');
+						   countDowmTimeLoad(120);
+					});
+				}
+   },1000);
+}
+
+/**弹出框公共方法*/
+function  toast(timeout,msg){
+
 }
