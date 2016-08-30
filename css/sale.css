@@ -6,7 +6,7 @@
 	font-family: "PingFang";
 	box-sizing: border-box;
 }
-.s1v1, .s1v2, .s0v1, .s1v3, .next1 {
+.s1v1, .s1v2, .s0v1, .s1v3, .next1,.s2v2 {
 	box-sizing: border-box;
 }
 html, body {
@@ -60,34 +60,34 @@ input {
 .s0v0 {
 	border-bottom: 1px #fff solid;
 	margin-bottom: 20px;
-	width: 90%;
+	width: 85%;
 	display: inline-block;
 	padding-bottom: 13px;
 	text-align: left;
 }
 .st0img2 {
 	width: 20px;
-	margin-left: 15px;
+	margin-left: 19px;
 }
 .s0v1 {
 	display: inline-block;
-	width: 90%;
-	height: 30px;
+	width: 85%;
+	height: 44px;
 	border: 1px solid #fff;
 	background-color: #75E1AF;
 	color: #fff;
 	border-radius: 4px;
 	text-align: center;
-	line-height: 30px;
+	line-height: 44px;
 	font-size: 18px;
 	font-family: "PingFang";
 	color: rgb(255, 255, 255);
-	margin-top: 10px;
+	margin-top: 20px;
 	margin-bottom: 15px;
 }
 .s0v2 {
 	display: inline-block;
-	width: 90%;
+	width: 85%;
 }
 .s0v2p1 {
 	color: rgb(1, 117, 74);
@@ -122,7 +122,7 @@ input {
 /**STEP_1 start*/
 .s1v1 {
 	border: 1px solid #C8C8C8;
-	width: 90%;
+	width: 85%;
 	margin: 0 auto;
 	padding: 8px;
 	color: rgb(69, 69, 69);
@@ -130,7 +130,7 @@ input {
 	height: 46px;
 }
 .s1v2 {
-	width: 90%;
+	width: 85%;
 	margin: 0 auto;
 	margin-top: 30px;
 	height: 46px;
@@ -168,7 +168,7 @@ input {
 	width: 37%;
 }
 #reg_code {
-	width: 90px;
+	width: 85px;
 }
 .s1input1 {
 	margin-top: 8px;
@@ -179,10 +179,11 @@ input {
 	font-family: "PingFang";
 	background-color: #E8E8E8;
 	color: rgb(255, 255, 255);
-	line-height: 1.2;
+	line-height: 30px;
+	height: 44px;
 	text-align: center;
 	border-radius: 5px;
-	width: 90%;
+	width: 85%;
 	padding: 8px;
 }
 .active {
@@ -196,12 +197,12 @@ input {
 .s2v1 {
 	font-size: 14px;
 	color: rgb(69, 69, 69);
-	width: 90%;
+	width: 85%;
 	margin: 0 auto;
 	margin-bottom: 20px;
 }
 .s2v2 {
-	width: 90%;
+	width: 85%;
 	margin: 0 auto;
 	border: 1px solid #C8C8C8;
 	padding: 8px;
@@ -259,7 +260,7 @@ input[type=checkbox]:checked + label:before {
 	margin-bottom: 20px;
 }
 .s3v3 {
-	width: 90%;
+	width: 85%;
 	margin: 0 auto;
 	font-size: 14px;
 	color: rgb(69, 69, 69);
