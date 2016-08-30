@@ -1,5 +1,5 @@
-<div class = "title">
-	{{getHomeTitle this}}
+<div class="title">
+	<img src="img/register/top.png" id={{id}}><span>{{titile}}</span>
 </div>
 
 <div class="s1v1">

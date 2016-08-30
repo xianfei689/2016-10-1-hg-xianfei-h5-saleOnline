@@ -1,5 +1,5 @@
-<div class = "title">
-	{{getHomeTitle this}}
+<div class="title">
+	<img src="img/register/top.png" id="back2"><span>{{titile}}</span>
 </div>
 <div class="s2v1">
 	<span>已发送到：</span><span id="showPhone">15268888888</span>

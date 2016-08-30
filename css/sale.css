@@ -1,9 +1,12 @@
-/**@xianfei @date:2016/8/29 @see:saleOnline main.css start*/
+*@xianfei @date:2016/8/29 @see:saleOnline main.css start*/
 
 /**main start*/
 * {
 	font-size: 14px;
 	font-family: "PingFang";
+	box-sizing: border-box;
+}
+.s1v1, .s1v2, .s0v1, .s1v3, .next1 {
 	box-sizing: border-box;
 }
 html, body {
@@ -184,6 +187,7 @@ input {
 }
 .active {
 	background-color: #44D29E;
+	cursor: pointer;
 }
 
 /**STEP_1 end*/
@@ -225,15 +229,75 @@ input {
 	margin-top: 5px;
 	color: rgb(69, 69, 69);
 }
-.resetTime{
+.resetTime {
 	color: #fff;
 	font-size: 14px;
 	background-color: #98F3D2;
 }
+
 /**STEP_2 end*/
 
 /**STEP_3 start*/
 
+
+.s3label:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	float: left;
+	background-position-y: 2px;
+	background-image: url(../img/register/uncheck.png);
+	background-size: 15px;
+	background-repeat: no-repeat;
+}
+input[type=checkbox]:checked + label:before {
+	background-image: url(../img/register/check.png);
+}
+#s3v2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.s3v3 {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 14px;
+	color: rgb(69, 69, 69);
+	margin-bottom: 30px;
+}
+.s3p1 {
+	color: #44D29E;
+}
+#STEP_3_1 p {
+	text-align: center;
+}
+.s3input {
+	margin-top: 8px;
+	width: 200px;
+}
+.s5input{
+    margin-top: 8px;
+	width: 200px;
+}
 /**STEP_3 end*/
 
-/**@xianfei @date:2016/8/29 @see:saleOnline main.css end*/
+/**STEP_4 start*/
+#STEP_4 {
+	text-align: center;
+}
+
+.s4img{
+		width: 132px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+#s4count {
+	color: rgb(68, 210, 158);
+	margin-bottom: 30px;
+}
+.s4p1{
+	 margin-bottom: 30px;
+}
+/**STEP_3 end*/
+
+/**@xianfei @date:2016/8/29 @see:saleOnline main.css end
