@@ -1,5 +1,5 @@
 <div class="title">
-	<img src="img/register/top.png" id="back5"><span>密码设置</span>
+	<img src="img/register/top.png" id="back8"><span>密码设置</span>
 </div>
 
 <div class="s1v1" id="s3v1">
