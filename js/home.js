@@ -268,19 +268,10 @@ define(function(require, exports, module) {
 						var time = 5;
 						//倒计时x秒后进入主页
 						countDowmTimeGotoMain(time);
-						
-
-					    if (isRest) {
-					    	 $("#back4").unbind("click").bind("click",function(){
-								$("#STEP_4").hide();
-								$("#STEP_5").show();
-					   		 });
-					    }else{
-					    	$("#back4").unbind("click").bind("click",function(){
-								$("#STEP_4").hide();
-								$("#STEP_3").show();
-					   		 });
-					    }
+						$("#back4").unbind("click").bind("click",function(){
+							$("#STEP_4").hide();
+							$("#STEP_3").show();
+					    });
 					};
 			});
 		},
@@ -313,10 +304,11 @@ define(function(require, exports, module) {
 			Rose.ajax.getHtml("tpl/step5.tpl", function(html, status) {
 				if (status) {
 					var template = Handlebars.compile(html);
+
 					$("#STEP_5").html(template());
 					load.done();
 					$("#STEP_5").show();
-					$("#back8").unbind("click").bind("click",function(){
+					$("#back5").unbind("click").bind("click",function(){
 							$("#STEP_5").hide();
 							$("#STEP_2").show();
 					});
