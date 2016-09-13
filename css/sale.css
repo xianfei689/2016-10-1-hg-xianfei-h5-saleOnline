@@ -171,7 +171,8 @@ input {
 	width: 90px;
 }
 .s1input1 {
-	margin-top: 8px;
+	    min-width: 82%;
+    min-height: 32px;
 }
 .next1 {
 	margin: 0 auto;
