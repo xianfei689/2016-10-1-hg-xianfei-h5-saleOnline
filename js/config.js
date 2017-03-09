@@ -8,7 +8,7 @@
 // var  basepath = "";
 //  conf [1:测试环境; 0 :本地环境]
 var conf = 0;
-var srcPref = ["/saleOnline-h5-hg-v1.0",""];
+var srcPref = ["/2016-10-1-hg-xianfei-h5-saleOnline",""];
 var timeStamp = '$1?ver=' + new Date().getTime();
 seajs.config({
   'map': [
